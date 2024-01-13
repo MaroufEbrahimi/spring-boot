@@ -8,6 +8,6 @@
     <title>First Web Application</title>
 </head>
 <body>
-<h1>Welcome to spring course</h1>
+<h1>Welcome to spring course, ${name}</h1>
 </body>
 </html>
