@@ -23,10 +23,10 @@ public class LoginController {
     public String showWelcome(ModelMap model, @RequestParam String name, @RequestParam String password) {
         boolean isValid = service.validateUser(name, password);
         if (!isValid) {
+            model.put("errorMessage", "Invalid Credentials");
             return "login";
         }
         model.put("name", name);
-        model.put("password", password);
         model.put("password", password);
         return "welcome";
     }
