@@ -8,6 +8,6 @@
     <title>Document</title>
 </head>
 <body>
-Welcome ${name}
+Welcome ${name} and Your password is ${password}
 </body>
 </html>
