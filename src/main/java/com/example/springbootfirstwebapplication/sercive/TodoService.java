@@ -15,8 +15,8 @@ public class TodoService {
 
     static {
         todos.add(new Todo(1, "famous", "todo for new spring", new Date(), false));
-        todos.add(new Todo(2, "Marouf", "spring with Marouf", new Date(), false));
-        todos.add(new Todo(3, "ali", "full stack tutorials with ali", new Date(), false));
+        todos.add(new Todo(2, "famous", "spring with famous", new Date(), false));
+        todos.add(new Todo(3, "famous", "full stack tutorials with famous", new Date(), false));
     }
 
     public List<Todo> retrieveTodos(String user) {

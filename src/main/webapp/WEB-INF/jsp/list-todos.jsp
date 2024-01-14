@@ -9,5 +9,6 @@
 </head>
 <body>
 Welcome to todo list
+${todos}
 </body>
 </html>
