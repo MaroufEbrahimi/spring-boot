@@ -8,6 +8,14 @@
     <title>First Web Application</title>
 </head>
 <body>
-<h1>Welcome to spring course, ${name}</h1>
+    <form method="post">
+        <label>Name: </label>
+        <input type="text" name="name" />
+        <br/>
+        <label>Password: </label>
+        <input type="password" name="password" />
+        <br/>
+        <input type="submit" />
+    </form>
 </body>
 </html>
