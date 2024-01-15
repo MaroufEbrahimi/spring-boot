@@ -9,12 +9,13 @@
     <link rel="stylesheet" href="../../css/style.css">
 </head>
 <body>
-<%--<font color="red">${errorMessage}</font>--%>
+
 <div class="login-container">
     <form class="login-form" method="post">
         <h2>Login</h2>
         <input type="text" name="name" placeholder="Username">
         <input type="password" name="password" placeholder="Password">
+        <p style="color: red; margin: 0; padding: 0; font-size: 12px">${errorMessage}</p>
         <button type="submit">Login</button>
     </form>
 </div>
