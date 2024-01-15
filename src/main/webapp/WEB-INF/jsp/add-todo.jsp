@@ -5,14 +5,9 @@
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Todo List</title>
+    <title>Add Todos</title>
 </head>
 <body>
-Welcome to todo list
-${todos}
-<br/>
-your name is : ${name}
-<br/>
-<a href="/add-todo">Add new Todo</a>
+Welcome to add new Todo
 </body>
 </html>
