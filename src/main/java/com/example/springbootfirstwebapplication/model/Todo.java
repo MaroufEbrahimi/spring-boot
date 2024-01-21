@@ -1,7 +1,6 @@
 package com.example.springbootfirstwebapplication.model;
 
 import java.util.Date;
-import java.util.Objects;
 
 public class Todo {
 
@@ -69,25 +68,27 @@ public class Todo {
     }
 
     @Override
-    public boolean equals(Object o) {
-        if (this == o) return true;
-        if (o == null || getClass() != o.getClass()) return false;
-        Todo todo = (Todo) o;
-        //return id == todo.id && isDone == todo.isDone && Objects.equals(user, todo.user) && Objects.equals(desc, todo.desc) && Objects.equals(targetDate, todo.targetDate);
-        if (id != todo.id) {
+    public boolean equals(Object obj) {
+        if (this == obj) {
+            return true;
+        }
+        if (obj == null) {
             return false;
         }
-        return false;
+        if (getClass() != obj.getClass()) {
+            return false;
+        }
+        Todo other = (Todo) obj;
+        if (id != other.id) {
+            return false;
+        }
+        return true;
     }
 
     @Override
     public String toString() {
-        return "Todo{" +
-                "id=" + id +
-                ", user='" + user + '\'' +
-                ", desc='" + desc + '\'' +
-                ", targetDate=" + targetDate +
-                ", isDone=" + isDone +
-                '}';
+        return String.format(
+                "Todo [id=%s, user=%s, desc=%s, targetDate=%s, isDone=%s]", id,
+                user, desc, targetDate, isDone);
     }
 }

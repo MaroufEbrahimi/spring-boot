@@ -1,17 +1,32 @@
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+
 <!doctype html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport"
-          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Todo List</title>
 </head>
 <body>
-Welcome to todo list
-${todos}
-<br/>
-your name is : ${name}
+<h1>Your Todos</h1>
+<table>
+    <caption>Your todos are</caption>
+    <thead>
+    <tr>
+        <th>Description</th>
+        <th>Target Date</th>
+        <th>Is it Done?</th>
+    </tr>
+    </thead>
+    <tbody>
+    <%--  it is similler to --> for (Item todo : todos)  --%>
+    <c:forEach items="${todos}" var="todo">
+        <tr>
+            <td>${todo.desc}</td>
+            <td>${todo.targetDate}</td>
+            <td>${todo.done}</td>
+        </tr>
+    </c:forEach>
+    </tbody>
+</table>
 <br/>
 <a href="/add-todo">Add new Todo</a>
 </body>

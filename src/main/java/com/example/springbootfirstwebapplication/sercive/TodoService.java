@@ -18,7 +18,7 @@ public class TodoService {
         todos.add(new Todo(2, "famous", "spring with famous", new Date(), false));
         todos.add(new Todo(3, "famous", "full stack tutorials with famous", new Date(), false));
     }
-
+    
     public List<Todo> retrieveTodos(String user) {
         List<Todo> filteredTodos = new ArrayList<Todo>();
         for (Todo todo : todos) {
