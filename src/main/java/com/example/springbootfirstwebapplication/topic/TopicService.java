@@ -2,19 +2,20 @@ package com.example.springbootfirstwebapplication.topic;
 
 import org.springframework.stereotype.Service;
 
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
 @Service
 public class TopicService {
 
-    private List<Topic> topics = Arrays.asList(
+    private List<Topic> topics = new ArrayList<>(Arrays.asList(
             new Topic("Spring", "Spring Frame", "Spring Frame Desc"),
             new Topic("Java", "Java Tutorials", "Java Tutorials Desc"),
             new Topic("React", "React Tutorials", "React Tutorials Desc"),
             new Topic("Test", "Test Tutorials", "Test Tutorials Desc"),
             new Topic("NEW", "New Tutorials", "New Tutorials Desc")
-    );
+    ));
 
     public List<Topic> getAllTopics() {
         return topics;
@@ -33,5 +34,7 @@ public class TopicService {
         return new Topic("defaultID", "Default Topic", "Default Desc");
     }
 
-
+    public void addTopic(Topic topic) {
+        topics.add(topic);
+    }
 }
