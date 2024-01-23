@@ -39,12 +39,17 @@ public class TopicService {
     }
 
     public void updateTopic(String id, Topic topic) {
-        for (int a = 0; a < topics.size(); a++){
+        for (int a = 0; a < topics.size(); a++) {
             Topic t = topics.get(a);
-            if (t.getId().equals(id)){
+            if (t.getId().equals(id)) {
                 topics.set(a, topic);
                 return;
             }
         }
+    }
+
+    public void deleteTopic(String id) {
+//        topics.removeIf(t -> t.getId().equals(id));
+        topics.removeIf(t -> t.getId().equalsIgnoreCase(id));
     }
 }
