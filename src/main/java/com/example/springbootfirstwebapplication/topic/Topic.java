@@ -1,9 +1,16 @@
 package com.example.springbootfirstwebapplication.topic;
 
+import jakarta.persistence.Column;
+import jakarta.persistence.Entity;
+import jakarta.persistence.Id;
+
+@Entity
 public class Topic {
 
+    @Id
     private String id;
     private String name;
+    @Column(name = "description")
     private String desc;
 
     public Topic() {
