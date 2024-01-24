@@ -22,7 +22,8 @@ public class TopicService {
     }
 
     public Topic getTopic(String id) {
-        return topicRepository.findById(id).orElse(null);
+//        return topicRepository.findById(id).orElse(null);
+        return topicRepository.findByIdIgnoreCase(id).orElse(null);
     }
 
     public void addTopic(Topic topic) {
