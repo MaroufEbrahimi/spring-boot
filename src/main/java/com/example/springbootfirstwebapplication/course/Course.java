@@ -4,6 +4,7 @@ import com.example.springbootfirstwebapplication.topic.Topic;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
+import jakarta.persistence.ManyToOne;
 
 @Entity
 public class Course {
@@ -13,6 +14,7 @@ public class Course {
     private String name;
     @Column(name = "description")
     private String desc;
+    @ManyToOne
     private Topic topic;
 
 
