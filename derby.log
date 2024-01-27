@@ -11,3 +11,6 @@ os.arch=amd64
 os.version=10.0
 derby.system.home=null
 Database Class Loader started - derby.database.classpath=''
+----------------------------------------------------------------
+Thu Jan 25 17:38:27 AFT 2024:
+Shutting down instance a816c00e-018d-3ff6-3b4c-000002883e80 on database directory memory:E:\Development\Backend\SpringBoot\spring-boot-first-web-application\2345f397-bc0b-42f0-a35e-aa1bdd3a074a with class loader jdk.internal.loader.ClassLoaders$AppClassLoader@76ed5528 
