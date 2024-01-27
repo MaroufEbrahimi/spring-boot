@@ -21,4 +21,22 @@ class SpringBootFirstWebApplicationTests {
         repo.save(student);
     }
 
+    @Test
+    void testFindStudentById() {
+        Student student = repo.findById(1L).get();
+        System.out.println(student);
+    }
+
+    @Test
+    void testUpdateStudent() {
+        Student student = repo.findById(1L).get();
+        student.setName("Ahmad");
+        repo.save(student);
+    }
+
+    @Test
+    void testDeleteStudent() {
+        Student student = repo.findById(1L).get();
+        repo.delete(student);
+    }
 }
