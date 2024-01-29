@@ -8,6 +8,8 @@ import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 
+import java.util.List;
+
 @Controller
 public class LocationController {
 
@@ -26,5 +28,12 @@ public class LocationController {
         modelMap.put("msg", msg);
 //        modelMap.addAttribute("msg", msg);
         return "createLocation";
+    }
+
+    @RequestMapping("/displayLocations")
+    public String displayLocations(ModelMap modelMap) {
+        List<Location> locations = locationService.getAllLocations();
+        modelMap.addAttribute("locations",  locations);
+        return "displayLocations";
     }
 }
