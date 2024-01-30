@@ -6,14 +6,23 @@
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Web Project | Create Location</title>
+    <link rel="stylesheet" type="text/css" th:href="@{/css/createLocation.css}">
 </head>
 <body>
 <form action="saveLoc" method="post">
-    ID: <input type="text" name="id"/>
-    Code: <input type="text" name="code"/>
-    Name: <input type="text" name="name"/>
-    Type: Urban <input type="radio" name="type" value="URBAN"/>
-    Rural <input type="radio" name="type" value="RURAL"/>
+    <label for="id">ID:</label>
+    <input type="text" name="id" id="id" required/>
+
+    <label for="code">Code:</label>
+    <input type="text" name="code" id="code" required/>
+
+    <label for="name">Name:</label>
+    <input type="text" name="name" id="name" required/>
+
+    <label>Type:</label>
+    <label for="urban"><input type="radio" name="type" id="urban" value="URBAN"/> Urban</label>
+    <label for="rural"><input type="radio" name="type" id="rural" value="RURAL"/> Rural</label>
+
     <input type="submit" value="Save"/>
 </form>
 <b th:text="${msg}"></b>

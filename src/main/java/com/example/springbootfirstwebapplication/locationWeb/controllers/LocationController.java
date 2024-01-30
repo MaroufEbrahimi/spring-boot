@@ -49,10 +49,18 @@ public class LocationController {
         return "displayLocations";
     }
 
-    @RequestMapping("/updateLocation")
-    public String updateLocation(@RequestParam("id") int id, ModelMap modelMap) {
+    @RequestMapping("/showUpdate")
+    public String showLocation(@RequestParam("id") int id, ModelMap modelMap) {
         Location location = locationService.getLocationById(id);
         modelMap.put("location", location);
-        return "editLocation";
+        return "updateLocation";
+    }
+
+    @RequestMapping("/updateLoc")
+    public String updateLocation(@ModelAttribute("location") Location location, ModelMap modelMap) {
+        locationService.updateLocation(location);
+        List<Location> locations = locationService.getAllLocations();
+        modelMap.put("locations", locations);
+        return "displayLocations";
     }
 }
