@@ -1,6 +1,5 @@
 <!doctype html>
-<%@ page contentType="text/html;charset=UTF-8" language="java" %>
-<html lang="en">
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport"
@@ -17,7 +16,7 @@
     Rural <input type="radio" name="type" value="RURAL"/>
     <input type="submit" value="Save"/>
 </form>
-${msg}
+<b th:text="${msg}"></b>
 
 <a href="displayLocations">View All</a>
 </body>
