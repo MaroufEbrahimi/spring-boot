@@ -1,6 +1,6 @@
 package com.example.springbootfirstwebapplication.controller;
 
-import com.example.springbootfirstwebapplication.sercive.LoginService;
+import com.example.springbootfirstwebapplication.service.LoginService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;

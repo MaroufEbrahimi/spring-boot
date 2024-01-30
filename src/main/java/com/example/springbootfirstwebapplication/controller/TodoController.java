@@ -12,8 +12,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.SessionAttributes;
 
-import com.example.springbootfirstwebapplication.sercive.TodoService;
-import com.example.springbootfirstwebapplication.sercive.LoginService;
+import com.example.springbootfirstwebapplication.service.TodoService;
 
 @Controller
 @SessionAttributes("name")
