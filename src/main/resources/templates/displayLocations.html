@@ -9,20 +9,23 @@
     <link rel="stylesheet" type="text/css" th:href="@{/css/displayLocations.css}">
 </head>
 <body>
-<h2>Locations:</h2>
+<h2>Locations</h2>
 <table>
     <tr>
         <th>ID</th>
         <th>CODE</th>
         <th>NAME</th>
         <th>TYPE</th>
+        <th>DELETE</th>
+        <th>UPDATE</th>
+
     </tr>
 
     <tr th:each="location:${locations}">
-        <td th:text="${location.id}"></td>
-        <td th:text="${location.code}"></td>
-        <td th:text="${location.name}"></td>
-        <td th:text="${location.type}"></td>
+        <th th:text="${location.id}"></th>
+        <th th:text="${location.code}"></th>
+        <th th:text="${location.name}"></th>
+        <th th:text="${location.type}"></th>
 
         <th><a th:href="@{'deleteLocation?id='+${location.id}}">Delete</a></th>
         <th><a th:href="@{'showUpdate?id='+${location.id}}">Edit</a></th>
